@@ -1,2 +1,2 @@
 # jenkins-maven-ssl
-jenkins maven with ssl  from letsencrypt
+jenkins maven with ssl (nginx proxy_pass)  from letsencrypt
