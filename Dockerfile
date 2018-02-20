@@ -12,8 +12,8 @@ pip install awscli && \
 apt-get update && \
 apt-get -y install docker-ce python-certbot-nginx
 #User 1000
-COPY nginx-default.conf source.conf 
-RUN envsubst < "source.conf" > "/etc/nginx/sites-available/default"
+COPY nginx-default.conf nginx.conf.template 
+#RUN envsubst < "source.conf" > "/etc/nginx/sites-available/default"
 COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
 RUN xargs /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 COPY ./docker-entrypoint.sh /
