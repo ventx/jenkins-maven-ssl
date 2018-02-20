@@ -1,7 +1,7 @@
 FROM jenkins/jenkins
 USER root
 RUN apt-get update && \
-apt-get install -y certbot python-pip nginx default-jdk docker apt-transport-https ca-certificates curl gnupg2 software-properties-common xmlstarlet maven gettext-base && \
+apt-get install -y supervisor certbot python-pip nginx default-jdk docker apt-transport-https ca-certificates curl gnupg2 software-properties-common xmlstarlet maven gettext-base && \
 chown 1000 ~/ && \
 curl -fsSL https://download.docker.com/linux/$(. /etc/os-release; echo "$ID")/gpg | apt-key add - && \ 
 add-apt-repository \
